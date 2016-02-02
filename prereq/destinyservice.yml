@@ -1,0 +1,101 @@
+baseUrl: "http://bungienetplatform.wikia.com"
+outputFilename: "endpoints.yml"
+pageSelector:
+    type: "category"
+    value: "DestinyService"
+# NOTE: This is not yet implemented
+customFunctions: "destinyservice.py"
+extractions:
+    - selector:
+          type: "pageData"
+          value: "pageid"
+      target:
+          name: "pageId"
+    - selector:
+          type: "pageData"
+          value: "title"
+      target:
+          name: "name"
+    - selector:
+          type: "pageText"
+      target:
+          name: "text"
+    - selector:
+          type: "templateVariable"
+          value: "accessibility"
+      target:
+          name: "accessibility"
+    - selector:
+          type: "templateVariable"
+          value: "method"
+      target:
+          name: "httpMethod"
+    - selector:
+          type: "templateVariable"
+          value: "uri"
+      target:
+          name: "uri"
+    - selector:
+          type: "templateVariable"
+          value: "description"
+      target:
+          name: "description"
+    - selector:
+          type: "templateVariable"
+          value: "uri"
+      target:
+          name: "uri"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "pname"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "pathVariableNames"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "pdesc"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "pathVariableDescriptions"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "qsname"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "queryStringVariableNames"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "qsdesc"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "queryStringVariableDescriptions"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "jname"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "jsonBodyVariableNames"
+    - selector:
+          type: "collectedTemplateVariables"
+          value: "jdesc"
+          rangeStart: 1
+          rangeEnd: 12
+      target:
+          name: "jsonBodyVariableDescriptions"
+    - selector:
+          type: "templateVariable"
+          value: "requestExample"
+      target:
+          name: "exampleRequest"
+    - selector:
+          type: "templateVariable"
+          value: "responseExample"
+      target:
+          name: "exampleResponse"
+postExtraction:
+    - todo: ""
