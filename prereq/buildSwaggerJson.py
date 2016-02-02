@@ -135,15 +135,15 @@ operations = {}
 
 # Tags to apply to each operation, for now just purpose-based tags
 tagMap = {
-    "EquipItem": ["character"],
-    "EquipItems": ["character"],
+    "EquipItem": ["character", "maybe-items"],
+    "EquipItems": ["character", "maybe-items"],
     "GetAccount": ["account"],
     "GetActivityHistory": ["stats"],
     "GetAdvisorsForCharacter": ["unsure-advisors-or-character"],
     "GetAdvisorsForCurrentCharacter": ["unsure-advisors-or-character"],
     "GetCharacter": ["character"],
     "GetCharacterActivities": ["character"],
-    "GetCharacterInventory": ["character"],
+    "GetCharacterInventory": ["character", "maybe-items"],
     "GetCharacterProgression": ["character"],
     "GetCharacterSummary": ["character"],
     "GetDestinyAccountSummary": ["account"],
@@ -159,7 +159,7 @@ tagMap = {
     "GetHistoricalStats": ["stats"],
     "GetHistoricalStatsDefinition": ["stats"],
     "GetHistoricalStatsForAccount": ["stats"],
-    "GetItemDetail": ["character"],
+    "GetItemDetail": ["character", "maybe-items"],
     "GetLeaderboards": ["stats"],
     "GetLeaderboardsForCharacter": ["stats"],
     "GetLeaderboardsForPsn": ["stats"],
@@ -173,16 +173,16 @@ tagMap = {
     "GetSpecialEventAdvisors": ["advisors"],
     "GetTriumphs": ["account"],
     "GetUniqueWeaponHistory": ["stats"],
-    "GetVault": ["account"],
+    "GetVault": ["account", "maybe-items"],
     "GetVendorForCurrentCharacter": ["unsure-character-or-vendors"],
     "GetVendorForCurrentCharacterWithMetadata": ["unsure-character-or-vendors"],
     "GetVendorItemDetailForCurrentCharacter": ["unsure-character-or-vendors"],
     "GetVendorItemDetailForCurrentCharacterWithMetadata": ["unsure-character-or-vendors"],
     "GetVendorSummariesForCurrentCharacter": ["unsure-character-or-vendors"],
     "SearchDestinyPlayer": ["unsure-account-or-lookups"],
-    "SetItemLockState": ["character"],
+    "SetItemLockState": ["character", "maybe-items"],
     "SetQuestTrackedState": ["character"],
-    "TransferItem": ["account"]
+    "TransferItem": ["account", "maybe-items"]
 }
 
 # Generates information about an "operation", which is basically a specific
